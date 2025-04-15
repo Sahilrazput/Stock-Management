@@ -24,7 +24,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))  # now BASE_DIR is defined
 # Now load from .env
 SECRET_KEY = env('SECRET_KEY')
 DEBUG = env.bool('DEBUG', default=False)
-ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=[])
+ALLOWED_HOSTS = ['*']
 
 DATABASES = {
     'default': dj_database_url.config(
